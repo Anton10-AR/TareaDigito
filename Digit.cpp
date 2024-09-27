@@ -51,9 +51,22 @@ bool Digit::stringToDigit(string input) {
 void Digit::next()
 {
     value++;
+    shortToDigit(value, digits);
 }
 
-bool Digit::shortToDigit(short input)
+void Digit::before()
+{
+    value--;
+    shortToDigit(value, digits);
+}
+
+void Digit::toDigit(short v)
+{
+    shortToDigit(v, digits);
+    cout << digits;
+}
+
+void Digit::shortToDigit(short input, bool output[7])
 {
 	bool output[7] = { false, false, false, false, false, false, false };
     switch (input) {
@@ -107,6 +120,5 @@ bool Digit::shortToDigit(short input)
         output[3] = false; output[4] = false; output[5] = true;
         output[6] = true;
         break;
-	return output;
 }
 

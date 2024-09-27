@@ -23,7 +23,7 @@ public:
 
 	bool stringToDigit(string input); // convierte un string en su equivalente digits
 
-	bool shortToDigit(short input); // convierte un short en su equivalente digits
+	void shortToDigit(short input, bool output[7]);  // modifica el segundo parámetro introducido
 
 	void next();	// obtiene el siguiente digito por ejemplo si value = 2, al llamar a next() value = 3
 					// se debe validar
