@@ -2,22 +2,28 @@
 #include <iostream>
 using namespace std;
 
-class Digit
-{
+class Digit {
+
 private:
+
 	short value;
 	bool digits[7];
 
 public:
-	Digit(short valor);
-		// habilitar los digitos
-		// 7 -> [1|1|1|0|0|0|0] -> debe llamar a la funcion toDigit()
 
-	Digit(string valor); // se asume que los caracteres estan ordenados
-		// valor = "abc" -> [1|1|1|0|0|0|0]
-		// valor = "abdeg" -> 2
+	//Digit(short valor);
+	//	// habilitar los digitos
+	//	// 7 -> [1|1|1|0|0|0|0] -> debe llamar a la funcion toDigit()
+
+	//Digit(string valor); // se asume que los caracteres estan ordenados
+	//	// valor = "abc" -> [1|1|1|0|0|0|0]
+	//	// valor = "abdeg" -> 2
 
 	Digit();		// constructor por defecto que genera todo con el '0'
+
+	bool stringToDigit(string input); // convierte un string en su equivalente digits
+
+	bool shortToDigit(short input); // convierte un short en su equivalente digits
 
 	void next();	// obtiene el siguiente digito por ejemplo si value = 2, al llamar a next() value = 3
 					// se debe validar
